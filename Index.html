@@ -19,12 +19,6 @@
             font-size: 50px;
             color: #ff0000;
             text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
-            animation: spin 4s infinite linear;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
         }
 
         marquee {
@@ -32,13 +26,6 @@
             color: #ffff00;
             font-family: 'Courier New', Courier, monospace;
             font-weight: bold;
-            animation: flash 1s infinite;
-        }
-
-        @keyframes flash {
-            0% { color: #ffff00; }
-            50% { color: #ff00ff; }
-            100% { color: #ffff00; }
         }
 
         .bio {
@@ -85,54 +72,43 @@
             font-size: 20px;
         }
 
-        .gif {
-            width: 100px;
-            height: 100px;
-            animation: bounce 1s infinite alternate;
-        }
-
-        @keyframes bounce {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(-10px); }
-        }
-
-        /* Corporate Mode */
-        .corporate {
+        /* Normal Mode */
+        .normal {
             background-color: white;
             color: black;
             font-family: 'Arial', sans-serif;
             text-align: left;
         }
 
-        .corporate h1 {
+        .normal h1 {
             color: #333;
             font-size: 36px;
             text-shadow: none;
-            animation: none;
         }
 
-        .corporate marquee {
+        .normal marquee {
             color: #333;
             font-size: 20px;
             font-weight: normal;
-            animation: none;
         }
 
-        .corporate .bio {
+        .normal .bio {
             background-color: #f4f4f4;
             color: #333;
             border: none;
             box-shadow: none;
+            font-size: 16px;
+            text-align: justify;
         }
 
-        .corporate .tracks {
+        .normal .tracks {
             background-color: #f4f4f4;
             color: #333;
             padding: 15px;
             margin-top: 20px;
         }
 
-        .corporate .footer {
+        .normal .footer {
             background-color: #f4f4f4;
             color: #333;
             padding: 10px;
@@ -140,7 +116,7 @@
             border-top: 1px solid #ccc;
         }
 
-        .corporate .contact-button {
+        .normal .contact-button {
             background-color: #008cba;
             border: 1px solid #008cba;
             color: #ffffff;
@@ -148,8 +124,13 @@
             font-weight: normal;
         }
 
-        .corporate .links {
+        .normal .links {
             color: #008cba;
+        }
+
+        /* Hide elements in Normal Mode by default */
+        .normal-content {
+            display: none;
         }
     </style>
 </head>
@@ -160,7 +141,6 @@
     <div class="bio">
         <h2>About Us</h2>
         <p>Dumbasses making dumbass music</p>
-        <img class="gif" src="https://media.giphy.com/media/3oEjI2MFA8Z7GZ2Rha/giphy.gif" alt="Spinning">
     </div>
 
     <div class="tracks">
@@ -177,16 +157,44 @@
         <p><a href="https://www.instagram.com/" class="links">Instagram</a> | <a href="" class="links">Twitter</a> | <a href="" class="links">Facebook</a></p>
     </div>
 
-    <button onclick="toggleMode()">Switch to Corporate Mode</button>
+    <!-- Button to Toggle Mode -->
+    <button onclick="toggleMode()">Switch to Normal Mode</button>
+
+    <!-- Content for Normal Mode (hidden initially) -->
+    <div class="normal-content">
+        <div class="bio">
+            <h2>About Us</h2>
+            <p>We are a collective of individuals, who, through the most perplexing and unforeseen circumstances, have endeavored to produce compositions of an extremely unconventional and provocative nature. Our pursuit is not only to challenge the norms of musical creation but to fully embrace the absurdity of it all, thus rendering our existence one of great complexity and perplexing joy.</p>
+        </div>
+
+        <div class="tracks">
+            <h2>Our Latest Tracks</h2>
+            <ul>
+                <li><strong>Track 1:</strong> "The Unfathomable Enigma of the Unreleased Sound" - A piece so profound that its very existence is shrouded in mystery.</li>
+                <li><strong>Track 2:</strong> "The Sound of Confusion" - A track that captures the very essence of confusion, wrapped in an auditory cocoon of complexity.</li>
+                <li><strong>Track 3:</strong> "Yet Another Nonexistent Melody" - A composition that defies the very notion of melody, presenting an abstract exploration of sound.</li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <p>Crafted with the utmost care and devotion by the members of Unfair Offspring | <a href="mailto:contact@unfairoffspring.com" class="contact-button">Contact Us</a></p>
+            <p><a href="https://www.instagram.com/" class="links">Instagram</a> | <a href="" class="links">Twitter</a> | <a href="" class="links">Facebook</a></p>
+        </div>
+    </div>
 
     <script>
         function toggleMode() {
-            document.body.classList.toggle('corporate');
+            document.body.classList.toggle('normal');
             const button = document.querySelector('button');
-            if (document.body.classList.contains('corporate')) {
+            const normalContent = document.querySelector('.normal-content');
+            
+            // Toggle the visibility of the additional content
+            if (document.body.classList.contains('normal')) {
                 button.textContent = "Switch to Fun Mode";
+                normalContent.style.display = "block";
             } else {
-                button.textContent = "Switch to Corporate Mode";
+                button.textContent = "Switch to Normal Mode";
+                normalContent.style.display = "none";
             }
         }
     </script>
