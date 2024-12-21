@@ -8,41 +8,90 @@
     <style>
         body {
             font-family: 'Comic Sans MS', cursive, sans-serif;
-            background-color: #f0f0f0;
-            color: #222222;
+            background-color: #ff69b4;
+            color: #00ff00;
             text-align: center;
-            padding: 20px;
+            padding: 100px;
+            animation: flashing 0.5s infinite;
+        }
+        @keyframes flashing {
+            0% { background-color: #ff69b4; }
+            50% { background-color: #ffff00; }
+            100% { background-color: #ff69b4; }
         }
         h1 {
-            color: #ff4500;
-            font-size: 3em;
+            color: #00ffff;
+            font-size: 6em;
+            text-shadow: 4px 4px 10px #ff4500, -4px -4px 10px #ff4500;
+            font-family: 'Impact', sans-serif;
+            letter-spacing: 5px;
         }
         h2 {
-            color: #006400;
+            color: #ff1493;
+            font-size: 2em;
+            font-family: 'Courier New', monospace;
+            text-transform: uppercase;
+            margin-top: 40px;
         }
         p {
-            font-size: 1.2em;
+            font-size: 2em;
+            line-height: 1.5;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            color: #ff6347;
+            text-shadow: 2px 2px 5px #000000;
         }
         a {
-            text-decoration: none;
-            color: #1e90ff;
+            text-decoration: underline;
+            color: #ffff00;
             font-weight: bold;
+            font-size: 1.5em;
+            padding: 10px;
+            background-color: #ff0000;
+            border-radius: 10px;
         }
         img {
-            max-width: 50%;
+            width: 80%;
+            border: 10px dashed #008000;
+            box-shadow: 0px 0px 20px 10px #ff00ff;
+            transform: rotate(10deg);
         }
         .member {
             display: inline-block;
-            width: 20%;
-            margin: 10px;
+            width: 15%;
+            margin: 30px;
+            background-color: #ff6347;
+            padding: 20px;
+            border: 10px double #000000;
+            box-shadow: 5px 5px 15px 5px #ff0000;
         }
         .member img {
-            width: 100%;
             border-radius: 50%;
+            transform: rotate(-10deg);
+            filter: hue-rotate(180deg);
         }
         .error {
-            color: red;
+            color: #ff00ff;
+            font-size: 2em;
+            font-family: 'Arial Black', sans-serif;
+            text-shadow: 3px 3px 7px #000000;
+        }
+        .members {
+            background-color: #0000ff;
+            padding: 20px;
+            margin: 50px;
+            border-radius: 20px;
+            border: 5px dotted #ff1493;
+        }
+        ul {
+            font-size: 1.5em;
+            list-style-type: square;
+            color: #32cd32;
+        }
+        li {
+            margin-bottom: 20px;
+            text-transform: uppercase;
             font-weight: bold;
+            letter-spacing: 3px;
         }
     </style>
 </head>
@@ -50,7 +99,7 @@
 
     <h1>Welcome to Unfair Offspring's Official Website!!!</h1>
 
-    <img src="https://www.example.com/logo.jpg" alt="Unfair Offspring Logo"> <!-- Insert a random placeholder image here! -->
+    <img src="https://www.example.com/logo.jpg" alt="Unfair Offspring Logo"> <!-- Random placeholder image -->
 
     <h2>Who We Are</h2>
     <p>We are Unfair Offspring. We make RAP MUSIC. BIG FLAVOR. BIG BEATS. The best! NO ONE does it better than us, not even the people who think they do. If you want to hear RAP that will make you say "What??!" and "No way!" then keep scrolling. We do songs. Cool songs. We make the music that... well, it’s music. Do you get it?</p>
