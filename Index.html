@@ -7,91 +7,120 @@
     <title>Unfair Offspring - The RAP COLLECTIVE</title>
     <style>
         body {
-            font-family: 'Comic Sans MS', cursive, sans-serif;
-            background-color: #ff69b4;
-            color: #00ff00;
+            background-color: #d8a7b1;
+            font-family: 'Papyrus', 'Comic Sans MS', cursive, sans-serif;
+            color: #704214;
             text-align: center;
-            padding: 100px;
-            animation: flashing 0.5s infinite;
-        }
-        @keyframes flashing {
-            0% { background-color: #ff69b4; }
-            50% { background-color: #ffff00; }
-            100% { background-color: #ff69b4; }
+            margin: 0;
+            padding: 0;
+            line-height: 1.8;
         }
         h1 {
-            color: #00ffff;
-            font-size: 6em;
-            text-shadow: 4px 4px 10px #ff4500, -4px -4px 10px #ff4500;
-            font-family: 'Impact', sans-serif;
-            letter-spacing: 5px;
+            font-size: 12em;
+            color: #8b4513;
+            text-shadow: 10px 10px 30px #ff6347;
+            letter-spacing: 15px;
+            padding-top: 200px;
         }
         h2 {
-            color: #ff1493;
-            font-size: 2em;
-            font-family: 'Courier New', monospace;
+            font-size: 8em;
+            color: #c71585;
             text-transform: uppercase;
-            margin-top: 40px;
+            margin-top: -50px;
+            font-family: 'Wingdings', 'Papyrus', sans-serif;
         }
         p {
-            font-size: 2em;
-            line-height: 1.5;
-            font-family: 'Comic Sans MS', cursive, sans-serif;
-            color: #ff6347;
-            text-shadow: 2px 2px 5px #000000;
+            font-size: 3em;
+            font-family: 'Impact', sans-serif;
+            color: #ff69b4;
+            margin: 20px 0;
+            text-shadow: 4px 4px 8px #800080;
         }
         a {
             text-decoration: underline;
             color: #ffff00;
-            font-weight: bold;
-            font-size: 1.5em;
-            padding: 10px;
-            background-color: #ff0000;
-            border-radius: 10px;
+            font-size: 4em;
+            font-family: 'Courier New', monospace;
+            background-color: #ff6347;
+            border-radius: 50px;
+            padding: 15px;
+            margin-top: 50px;
+        }
+        a:hover {
+            background-color: #d2691e;
+            color: #000;
         }
         img {
-            width: 80%;
-            border: 10px dashed #008000;
-            box-shadow: 0px 0px 20px 10px #ff00ff;
-            transform: rotate(10deg);
+            width: 70%;
+            height: auto;
+            border: 20px double #800000;
+            margin-top: 30px;
+            transform: rotate(45deg);
+            box-shadow: 0px 0px 30px 15px #ff1493;
         }
         .member {
             display: inline-block;
-            width: 15%;
-            margin: 30px;
-            background-color: #ff6347;
-            padding: 20px;
-            border: 10px double #000000;
-            box-shadow: 5px 5px 15px 5px #ff0000;
+            width: 60%;
+            margin: 10px;
+            padding: 5px;
+            background-color: #8b4513;
+            border: 10px solid #ff6347;
+            color: #fff;
+            font-size: 5em;
+            font-family: 'Papyrus', sans-serif;
+            box-shadow: 5px 5px 15px 5px #ff69b4;
+            position: relative;
+            top: -50px;
         }
         .member img {
+            width: 100%;
             border-radius: 50%;
-            transform: rotate(-10deg);
-            filter: hue-rotate(180deg);
+            margin: 0;
+            box-shadow: 0px 0px 30px 5px #ff6347;
         }
         .error {
-            color: #ff00ff;
-            font-size: 2em;
-            font-family: 'Arial Black', sans-serif;
-            text-shadow: 3px 3px 7px #000000;
-        }
-        .members {
-            background-color: #0000ff;
-            padding: 20px;
-            margin: 50px;
-            border-radius: 20px;
-            border: 5px dotted #ff1493;
+            color: #ff4500;
+            font-size: 6em;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            text-shadow: 5px 5px 20px #000000;
         }
         ul {
-            font-size: 1.5em;
-            list-style-type: square;
-            color: #32cd32;
+            color: #ff6347;
+            font-size: 3em;
+            font-family: 'Papyrus', sans-serif;
+            padding-left: 50px;
+            margin-top: 50px;
         }
         li {
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            font-weight: bold;
-            letter-spacing: 3px;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 5px #8b0000;
+            font-weight: bolder;
+        }
+        .members {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: #d8a7b1;
+            padding: 20px;
+            margin-top: -50px;
+        }
+        .members div {
+            width: 80%;
+            background-color: #f4a460;
+            padding: 10px;
+            box-shadow: 10px 10px 20px 10px #800000;
+        }
+        footer {
+            font-family: 'Courier New', monospace;
+            color: #ff6347;
+            text-align: center;
+            font-size: 4em;
+            margin-top: 100px;
+            padding: 20px;
+            background-color: #800000;
+            border: 5px solid #ff1493;
         }
     </style>
 </head>
@@ -153,9 +182,4 @@
     <ul>
         <li><a href="https://www.instagram.com/unfairoffspring">Instagram</a></li>
         <li><a href="https://www.twitter.com/unfairoffspring">Twitter</a></li>
-        <li><a href="https://www.myspace.com/unfairoffspring">MySpace</a> (does MySpace still exist?)</li>
-        <li><a href="https://www.tiktok.com/unfairoffspring">TikTok</a></li>
-    </ul>
-
-</body>
-</html>
+        <li><a href="https://www.myspace.com/unfairoffspring">MySpace
