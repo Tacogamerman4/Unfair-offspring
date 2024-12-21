@@ -12,6 +12,7 @@
             text-align: center;
             padding: 0;
             margin: 0;
+            transition: all 0.5s ease;
         }
 
         h1 {
@@ -94,6 +95,62 @@
             0% { transform: translateY(0); }
             100% { transform: translateY(-10px); }
         }
+
+        /* Corporate Mode */
+        .corporate {
+            background-color: white;
+            color: black;
+            font-family: 'Arial', sans-serif;
+            text-align: left;
+        }
+
+        .corporate h1 {
+            color: #333;
+            font-size: 36px;
+            text-shadow: none;
+            animation: none;
+        }
+
+        .corporate marquee {
+            color: #333;
+            font-size: 20px;
+            font-weight: normal;
+            animation: none;
+        }
+
+        .corporate .bio {
+            background-color: #f4f4f4;
+            color: #333;
+            border: none;
+            box-shadow: none;
+        }
+
+        .corporate .tracks {
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        .corporate .footer {
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 10px;
+            font-size: 12px;
+            border-top: 1px solid #ccc;
+        }
+
+        .corporate .contact-button {
+            background-color: #008cba;
+            border: 1px solid #008cba;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: normal;
+        }
+
+        .corporate .links {
+            color: #008cba;
+        }
     </style>
 </head>
 <body>
@@ -110,8 +167,8 @@
         <h2>Our Latest Tracks</h2>
         <ul>
             <li><strong>Track 1:</strong> "Idk some song once we release shit"</li>
-            <li><strong>Track 2:</strong> "Idk some song once we release shit</li>
-            <li><strong>Track 3:</strong> "Idk some song once we release shit</li>
+            <li><strong>Track 2:</strong> "Idk some song once we release shit"</li>
+            <li><strong>Track 3:</strong> "Idk some song once we release shit"</li>
         </ul>
     </div>
 
@@ -119,5 +176,19 @@
         <p>Made with <strong><font color="#ff00ff">♥</font></strong> by Unfair Offspring | <a href="mailto:contact@unfairoffspring.com" class="contact-button">Contact Us</a></p>
         <p><a href="https://www.instagram.com/" class="links">Instagram</a> | <a href="" class="links">Twitter</a> | <a href="" class="links">Facebook</a></p>
     </div>
+
+    <button onclick="toggleMode()">Switch to Corporate Mode</button>
+
+    <script>
+        function toggleMode() {
+            document.body.classList.toggle('corporate');
+            const button = document.querySelector('button');
+            if (document.body.classList.contains('corporate')) {
+                button.textContent = "Switch to Fun Mode";
+            } else {
+                button.textContent = "Switch to Corporate Mode";
+            }
+        }
+    </script>
 </body>
 </html>
