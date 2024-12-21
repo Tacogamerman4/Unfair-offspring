@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unfair Offspring</title>
+    <style>
+        body {
+            background-color: #ff00ff;
+            font-family: 'Comic Sans MS', 'Arial', sans-serif;
+            color: #00ff00;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 50px;
+            color: #ff0000;
+            text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
+            animation: spin 4s infinite linear;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        marquee {
+            font-size: 24px;
+            color: #ffff00;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            animation: flash 1s infinite;
+        }
+
+        @keyframes flash {
+            0% { color: #ffff00; }
+            50% { color: #ff00ff; }
+            100% { color: #ffff00; }
+        }
+
+        .bio {
+            background-color: #ff0000;
+            color: #ffffff;
+            padding: 20px;
+            margin: 20px;
+            border: 5px solid #000000;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .tracks {
+            background-color: #ffff00;
+            color: #0000ff;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        .footer {
+            background-color: #00ff00;
+            color: #000000;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 14px;
+            border-top: 3px solid #ff0000;
+        }
+
+        .links {
+            font-size: 18px;
+            text-decoration: none;
+            color: #000000;
+        }
+
+        .contact-button {
+            padding: 10px;
+            background-color: #ff00ff;
+            border: 2px solid #000000;
+            color: #ffffff;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .gif {
+            width: 100px;
+            height: 100px;
+            animation: bounce 1s infinite alternate;
+        }
+
+        @keyframes bounce {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body>
+    <h1>UNFAIR OFFSPRING</h1>
+    <marquee>Welcome to the OFFICIAL site of Unfair Offspring</marquee>
+
+    <div class="bio">
+        <h2>About Us</h2>
+        <p>Dumbasses making dumbass music</p>
+        <img class="gif" src="https://media.giphy.com/media/3oEjI2MFA8Z7GZ2Rha/giphy.gif" alt="Spinning">
+    </div>
+
+    <div class="tracks">
+        <h2>Our Latest Tracks</h2>
+        <ul>
+            <li><strong>Track 1:</strong> "Idk some song once we release shit"</li>
+            <li><strong>Track 2:</strong> "Idk some song once we release shit</li>
+            <li><strong>Track 3:</strong> "Idk some song once we release shit</li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        <p>Made with <strong><font color="#ff00ff">♥</font></strong> by Unfair Offspring | <a href="mailto:contact@unfairoffspring.com" class="contact-button">Contact Us</a></p>
+        <p><a href="https://www.instagram.com/" class="links">Instagram</a> | <a href="" class="links">Twitter</a> | <a href="" class="links">Facebook</a></p>
+    </div>
+</body>
+</html>
